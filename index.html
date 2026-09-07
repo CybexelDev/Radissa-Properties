@@ -288,7 +288,8 @@
        HERO SECTION
   ====================================================== -->
 
-  <section class="relative  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
+  <section id="home"
+   class="relative  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
 
 
     <!-- BACKGROUND IMAGE -->
@@ -366,7 +367,7 @@
             <a href="#" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About Us</a>
             <a href="#services" class="nav-link">Services</a>
-            <a href="#why" class="nav-link">Why Radissa</a>
+            <a href="#advantages" class="nav-link">Why Radissa</a>
             <a href="#contact" class="nav-link">Contact Us</a>
 
           </nav>
@@ -499,7 +500,7 @@
               class="rounded-md px-2 py-3 text-white/90 transition-colors duration-300 hover:bg-white/5">
               About Us </a> <a href="#services"
               class="rounded-md px-2 py-3 text-white/90 transition-colors duration-300 hover:bg-white/5">
-              Services </a> <a href="#why"
+              Services </a> <a href="#advantages"
               class="rounded-md px-2 py-3 text-white/90 transition-colors duration-300 hover:bg-white/5">
               Why Radissa </a> <a href="#contact"
               class="rounded-md px-2 py-3 text-white/90 transition-colors duration-300 hover:bg-white/5">
@@ -994,7 +995,8 @@
 
 
 
-  <section class="w-full  py-16 md:py-24 lg:py-[135px]">
+  <section id="about"
+  class="w-full  py-16 md:py-24 lg:py-[135px]">
     <div class=" mx-auto px-6 lg:px-10 xl:px-[62px]">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-20 items-center">
 
@@ -1086,7 +1088,8 @@
   </section>
 
   <!-- ================= OUR SERVICES ================= -->
-  <section class="w-full bg-[#f8f8f6]
+  <section id="services"
+  class="w-full bg-[#f8f8f6]
          px-6 pb-14
          sm:px-8
          lg:px-10 lg:pb-16
@@ -1368,7 +1371,8 @@
 
 
   <!-- ================= RADISSA ADVANTAGE SECTION ================= -->
-  <section class="w-full bg-[#f8f8f6]
+  <section id="advantages" 
+   class="w-full bg-[#f8f8f6]
          px-6 pt-14
          sm:py-14
          sm:px-8
@@ -1941,8 +1945,8 @@
 
 
   <!-- ================= CONTACT SECTION ================= -->
-  <!-- ================= CONTACT SECTION ================= -->
-  <section class="w-full bg-black 
+  <section id="contact"
+   class="w-full bg-black 
          px-4 py-8
          sm:py-12
          sm:px-6
@@ -3239,6 +3243,18 @@
       }
 
     });
+
+  history.scrollRestoration = "manual";
+
+  window.addEventListener("load", () => {
+    // Remove #about / #services / etc. from URL
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+
+    // Go to top
+    window.scrollTo(0, 0);
+  });
 
   </script>
 
