@@ -288,8 +288,7 @@
        HERO SECTION
   ====================================================== -->
 
-  <section id="home"
-   class="relative  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
+  <section id="home" class="relative  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
 
 
     <!-- BACKGROUND IMAGE -->
@@ -364,7 +363,7 @@
             text-[#FFFFFF]
         ">
 
-            <a href="#" class="nav-link">Home</a>
+            <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About Us</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#advantages" class="nav-link">Why Radissa</a>
@@ -581,159 +580,351 @@
              max-lg:px-10
              max-md:w-full max-md:px-5 max-md:py-8">
 
-            <form id="enquiryForm">
+           <form
+  action="https://formspree.io/f/xppzyepq"
+  method="POST"
+  id="enquiryForm"
+>
 
-              <!-- ROW 1 -->
-              <div class="grid grid-cols-2 gap-x-6 gap-y-3 max-sm:grid-cols-1">
+  <!-- ROW 1 -->
+  <div class="grid grid-cols-2 gap-x-6 gap-y-3 max-sm:grid-cols-1">
 
-                <!-- FULL NAME -->
-                <div>
-                  <label for="fullName" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Full Name
-                  </label>
+    <!-- FULL NAME -->
+    <div>
+      <label
+        for="fullName"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Full Name
+      </label>
 
-                  <input id="fullName" name="fullName" type="text" placeholder="Enter your full name"
-                    class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]" />
-                </div>
-
-
-                <!-- PHONE -->
-                <div>
-                  <label for="phoneNumber" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Phone Number
-                  </label>
-
-                  <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="+91"
-                    class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]" />
-                </div>
-
-
-                <!-- WHATSAPP -->
-                <div>
-                  <label for="whatsappNumber" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Whatsapp Number
-                  </label>
-
-                  <input id="whatsappNumber" name="whatsappNumber" type="tel" placeholder="Enter your WhatsApp number"
-                    class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]" />
-                </div>
+      <input
+        id="fullName"
+        name="fullName"
+        type="text"
+        required
+        placeholder="Enter your full name"
+        class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      />
+    </div>
 
 
-                <!-- EMAIL -->
-                <div>
-                  <label for="emailAddress" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Email Address
-                  </label>
+    <!-- PHONE -->
+    <div>
+      <label
+        for="phoneNumber"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Phone Number
+      </label>
 
-                  <input id="emailAddress" name="emailAddress" type="email" placeholder="@gmail.com"
-                    class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]" />
-                </div>
-
-
-                <!-- ADDRESS -->
-                <div>
-                  <label for="address" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Address
-                  </label>
-
-                  <input id="address" name="address" type="text" placeholder="Enter your full address"
-                    class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]" />
-                </div>
-
-
-                <!-- SERVICE -->
-                <div>
-                  <label for="service" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                    Select Service
-                  </label>
-
-                  <div class="relative">
-                    <select id="service" name="service"
-                      class="h-[37px] w-full appearance-none rounded-[5px] border-0 bg-white px-3 pr-9 font-jakarta text-[11px] font-medium text-[#6B7280] outline-none focus:ring-2 focus:ring-[#D6AC24]"
-                      onchange="this.classList.remove('text-[#6B7280]'); this.classList.add('text-black')">
-                      <option value="Property Management" class="text-black">
-                        Property Management
-                      </option>
-                      <option value="Property Development" class="text-black">
-                        Property Development
-                      </option>
-                      <option value="Property Sales" class="text-black">
-                        Property Sales
-                      </option>
-                      <option value="Property Consultation" class="text-black">
-                        Property Consultation
-                      </option>
-                    </select>
-
-                    <!-- SELECT ARROW -->
-                    <svg class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
-                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6" />
-                    </svg>
-                  </div>
-                </div>
-
-              </div>
+      <input
+        id="phoneNumber"
+        name="phoneNumber"
+        type="tel"
+        required
+        pattern="[0-9]{10}"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="+91"
+        class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      />
+    </div>
 
 
-              <!-- ================================================= -->
-              <!-- MESSAGE -->
-              <!-- ================================================= -->
+    <!-- WHATSAPP -->
+    <div>
+      <label
+        for="whatsappNumber"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Whatsapp Number
+      </label>
 
-              <div class="mt-3">
-
-                <label for="message" class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]">
-                  Message
-                </label>
-
-                <div class="relative">
-
-                  <textarea id="message" name="message" maxlength="200"
-                    placeholder="Tell us about your property requirements"
-                    class="h-[127px] w-full resize-none rounded-[5px] border-0 bg-white px-3 py-3 font-jakarta text-[11px] leading-[16px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"></textarea>
-
-                  <span id="messageCount" class="absolute bottom-2 right-2 font-jakarta text-[9px] text-[#A5ADBE]">
-                    0/200
-                  </span>
-
-                </div>
-
-              </div>
+      <input
+        id="whatsappNumber"
+        name="whatsappNumber"
+        type="tel"
+        required
+        pattern="[0-9]{10}"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="Enter your WhatsApp number"
+        class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      />
+    </div>
 
 
-              <!-- ================================================= -->
-              <!-- SUBMIT -->
-              <!-- ================================================= -->
+    <!-- EMAIL -->
+    <div>
+      <label
+        for="emailAddress"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Email Address
+      </label>
 
-              <button type="submit"
-                class="mt-4 flex h-[38px] w-full items-center justify-center gap-2 rounded-[6px] bg-[#D9B333] font-poppins text-[11px] sm:text-[15px] font-[500] text-white transition hover:bg-[#caa52d]">
-                SUBMIT
+      <input
+        id="emailAddress"
+        name="emailAddress"
+        type="email"
+        required
+        placeholder="@gmail.com"
+        class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      />
+    </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </button>
+
+    <!-- ADDRESS -->
+    <div>
+      <label
+        for="address"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Address
+      </label>
+
+      <input
+        id="address"
+        name="address"
+        type="text"
+        required
+        placeholder="Enter your full address"
+        class="h-[37px] w-full rounded-[5px] border-0 bg-white px-3 font-jakarta text-[11px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      />
+    </div>
 
 
-              <!-- SECURITY TEXT -->
-              <div class="mt-3 flex items-center justify-center gap-2">
+    <!-- SERVICE -->
+    <div>
+      <label
+        for="service"
+        class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+      >
+        Select Service
+      </label>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1.5" class="text-gray-500">
-                  <rect width="14" height="12" x="5" y="9" rx="2" />
-                  <path d="M8 9V7a4 4 0 0 1 8 0v2" />
-                </svg>
+      <div class="relative">
 
-                <span class="font-poppins text-[12px] text-[#656565]">
-                  Your information is safe with us.
-                </span>
+        <select
+          id="service"
+          name="service"
+          required
+          class="h-[37px] w-full appearance-none rounded-[5px] border-0 bg-white px-3 pr-9 font-jakarta text-[11px] font-medium text-[#6B7280] outline-none focus:ring-2 focus:ring-[#D6AC24]"
+          onchange="this.classList.remove('text-[#6B7280]'); this.classList.add('text-black')"
+        >
+          <option value="Property Management" class="text-black">
+            Property Management
+          </option>
 
-              </div>
+          <option value="Property Development" class="text-black">
+            Property Development
+          </option>
 
-            </form>
+          <option value="Property Sales" class="text-black">
+            Property Sales
+          </option>
+
+          <option value="Property Consultation" class="text-black">
+            Property Consultation
+          </option>
+        </select>
+
+        <!-- SELECT ARROW -->
+        <svg
+          class="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m6 9 6 6 6-6"
+          />
+        </svg>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- MESSAGE -->
+  <div class="mt-3">
+
+    <label
+      for="message"
+      class="mb-1.5 block font-poppins text-[11px] font-[400] text-[#D4AF37]"
+    >
+      Message
+    </label>
+
+    <div class="relative">
+
+      <textarea
+        id="message"
+        name="message"
+        required
+        maxlength="200"
+        placeholder="Tell us about your property requirements"
+        class="h-[127px] w-full resize-none rounded-[5px] border-0 bg-white px-3 py-3 font-jakarta text-[11px] leading-[16px] text-black outline-none placeholder:text-gray-500 focus:ring-2 focus:ring-[#D6AC24]"
+      ></textarea>
+
+      <span
+        id="messageCount"
+        class="absolute bottom-2 right-2 font-jakarta text-[9px] text-[#A5ADBE]"
+      >
+        0/200
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- SUBMIT -->
+  <button
+    type="submit"
+    class="mt-4 flex h-[38px] w-full items-center justify-center gap-2 rounded-[6px] bg-[#D9B333] font-poppins text-[11px] font-[500] text-white transition hover:bg-[#caa52d] sm:text-[15px]"
+  >
+    SUBMIT
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M5 12h14M13 6l6 6-6 6"
+      />
+    </svg>
+
+  </button>
+
+
+  <!-- SECURITY TEXT -->
+  <div class="mt-3 flex items-center justify-center gap-2">
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="text-gray-500"
+    >
+      <rect width="14" height="12" x="5" y="9" rx="2" />
+      <path d="M8 9V7a4 4 0 0 1 8 0v2" />
+    </svg>
+
+    <span class="font-poppins text-[12px] text-[#656565]">
+      Your information is safe with us.
+    </span>
+
+  </div>
+
+</form>
 
           </div>
+
+<!-- PREMIUM SUCCESS MESSAGE -->
+<div
+  id="successMessage"
+  class="absolute inset-0 z-30 hidden items-center justify-center bg-[#E7E7E5]"
+>
+  <div class="flex w-full max-w-[460px] flex-col items-center px-8 text-center">
+
+    <!-- SUCCESS ICON -->
+    <div class="relative mb-7 flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#D9B333]/40 bg-white">
+      
+      <!-- Outer subtle ring -->
+      <div
+        class="absolute inset-[6px] rounded-full border border-[#D9B333]/20"
+      ></div>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#C19A28"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="relative"
+      >
+        <path d="M20 6 9 17l-5-5" />
+      </svg>
+
+    </div>
+
+
+    <!-- SMALL LABEL -->
+    <span
+      class="mb-3 font-poppins text-[9px] font-[500] uppercase tracking-[3px] text-[#B18A25]"
+    >
+      Enquiry Received
+    </span>
+
+
+    <!-- TITLE -->
+    <h2
+      class="font-poppins text-[26px] font-[500] tracking-[-0.3px] text-[#1A1A1A]"
+    >
+      Thank You
+    </h2>
+
+
+    <!-- DIVIDER -->
+    <div class="my-5 flex items-center justify-center gap-2">
+      <span class="h-px w-[28px] bg-[#D9B333]/40"></span>
+
+      <span class="h-[4px] w-[4px] rotate-45 bg-[#D9B333]"></span>
+
+      <span class="h-px w-[28px] bg-[#D9B333]/40"></span>
+    </div>
+
+
+    <!-- DESCRIPTION -->
+    <p
+      class="max-w-[370px] font-jakarta text-[12px] font-[400] leading-[20px] text-[#656565]"
+    >
+      Thank you for contacting Radissa Properties.
+      Your enquiry has been successfully received.
+      Our team will get in touch with you shortly.
+    </p>
+
+
+    <!-- CLOSE BUTTON -->
+    <button
+      type="button"
+      id="successCloseBtn"
+      class="mt-8 flex h-[42px] min-w-[145px] items-center justify-center rounded-[5px] border border-[#C5A12C] bg-[#C5A12C] px-7 font-poppins text-[10px] font-[500] uppercase tracking-[1.8px] text-white transition-all duration-300 hover:bg-[#B28F22]"
+    >
+      Close
+    </button>
+
+
+    <!-- BOTTOM NOTE -->
+    <p
+      class="mt-5 font-jakarta text-[9px] tracking-[0.3px] text-[#999999]"
+    >
+      We appreciate your interest in Radissa Properties.
+    </p>
+
+  </div>
+</div>
 
         </div>
       </div>
@@ -995,8 +1186,7 @@
 
 
 
-  <section id="about"
-  class="w-full  py-16 md:py-24 lg:py-[135px]">
+  <section id="about" class="w-full  py-16 md:py-24 lg:py-[135px]">
     <div class=" mx-auto px-6 lg:px-10 xl:px-[62px]">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-20 items-center">
 
@@ -1088,8 +1278,7 @@
   </section>
 
   <!-- ================= OUR SERVICES ================= -->
-  <section id="services"
-  class="w-full bg-[#f8f8f6]
+  <section id="services" class="w-full bg-[#f8f8f6]
          px-6 pb-14
          sm:px-8
          lg:px-10 lg:pb-16
@@ -1371,8 +1560,7 @@
 
 
   <!-- ================= RADISSA ADVANTAGE SECTION ================= -->
-  <section id="advantages" 
-   class="w-full bg-[#f8f8f6]
+  <section id="advantages" class="w-full bg-[#f8f8f6]
          px-6 pt-14
          sm:py-14
          sm:px-8
@@ -1945,8 +2133,7 @@
 
 
   <!-- ================= CONTACT SECTION ================= -->
-  <section id="contact"
-   class="w-full bg-black 
+  <section id="contact" class="w-full bg-black 
          px-4 py-8
          sm:py-12
          sm:px-6
@@ -2204,171 +2391,141 @@
                 lg:px-7 lg:py-7
                 xl:px-8 xl:py-10">
 
-        <form class="flex flex-col gap-6 sm:gap-8 font-poppins font-[400]">
+        <form
+  id="contactForm"
+  action="https://formspree.io/f/mbgjzewg"
+  method="POST"
+  class="flex flex-col gap-6 font-poppins font-[400] sm:gap-8"
+>
+
+  <!-- ================= FULL NAME ================= -->
+  <div>
+
+    <label
+      for="contactFullName"
+      class="mb-4 block font-jakarta text-[16px] leading-6 tracking-[1.6px] text-[#D4AF37]"
+    >
+      Full Name
+    </label>
+
+    <input
+      id="contactFullName"
+      name="fullName"
+      type="text"
+      required
+      placeholder="Enter your full name"
+      class="w-full rounded-[40px] border border-[#D1D5DB] bg-[#46423C] px-4 py-[14px] text-[11px] text-white outline-none placeholder:text-[#6B7280] focus:border-[#DDB66B] sm:text-[14px]"
+    />
+
+  </div>
 
 
-          <!-- ================= FULL NAME ================= -->
-          <div>
+  <!-- ================= PHONE + EMAIL ================= -->
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
-            <label class="mb-4 block
-                        font-jakarta
-                        text-[16px] 
-                        leading-6
-                        tracking-[1.6px]
-                        text-[#D4AF37]">
-              Full Name
-            </label>
+    <!-- Phone -->
+    <div>
 
-            <input type="text" placeholder="Enter your full name" class=" w-full rounded-[40px]
-                   border border-[#D1D5DB]
-                   bg-[#46423C]
-                   px-4
-                   py-[14px]
-                   text-[11px]
-                   text-white
-                   outline-none
-                   placeholder:text-[#6B7280]
-                   focus:border-[#DDB66B]
-                    sm:text-[14px]" />
+      <label
+        for="contactPhone"
+        class="mb-4 block font-jakarta text-[16px] leading-6 tracking-[1.6px] text-[#D4AF37]"
+      >
+        Phone Number
+      </label>
 
-          </div>
+      <input
+        id="contactPhone"
+        name="phoneNumber"
+        type="tel"
+        required
+        pattern="[0-9]{10}"
+        maxlength="10"
+        inputmode="numeric"
+        placeholder="+91 -"
+        class="w-full rounded-[40px] border border-[#D1D5DB] bg-[#46423C] px-4 py-[14px] text-[11px] text-white outline-none placeholder:text-[#6B7280] focus:border-[#DDB66B] sm:text-[14px]"
+      />
 
-
-          <!-- ================= PHONE + EMAIL ================= -->
-          <div class="grid grid-cols-1 gap-4
-                    sm:grid-cols-2">
-
-            <!-- Phone -->
-            <div>
-
-              <label class="mb-4 block
-                        font-jakarta
-                        text-[16px] 
-                        leading-6
-                        tracking-[1.6px]
-                        text-[#D4AF37]">
-                Phone Number
-              </label>
-
-              <input type="tel" placeholder="+91 -" class=" w-full rounded-[40px]
-                   border border-[#D1D5DB]
-                   bg-[#46423C]
-                   px-4
-                   py-[14px]
-                   text-[11px]
-                   text-white
-                   outline-none
-                   placeholder:text-[#6B7280]
-                   focus:border-[#DDB66B]
-                    sm:text-[14px]" />
-
-            </div>
+    </div>
 
 
-            <!-- Email -->
-            <div>
+    <!-- Email -->
+    <div>
 
-              <label class="mb-4 block
-                        font-jakarta
-                        text-[16px] 
-                        leading-6
-                        tracking-[1.6px]
-                        text-[#D4AF37]">
-                E-Mail Address
-              </label>
+      <label
+        for="contactEmail"
+        class="mb-4 block font-jakarta text-[16px] leading-6 tracking-[1.6px] text-[#D4AF37]"
+      >
+        E-Mail Address
+      </label>
 
-              <input type="email" placeholder="email@domain.com" class=" w-full rounded-[40px]
-                   border border-[#D1D5DB]
-                   bg-[#46423C]
-                   px-4
-                   py-[14px]
-                   text-[11px]
-                   text-white
-                   outline-none
-                   placeholder:text-[#6B7280]
-                   focus:border-[#DDB66B]
-                    sm:text-[14px]" />
+      <input
+        id="contactEmail"
+        name="emailAddress"
+        type="email"
+        required
+        placeholder="email@domain.com"
+        class="w-full rounded-[40px] border border-[#D1D5DB] bg-[#46423C] px-4 py-[14px] text-[11px] text-white outline-none placeholder:text-[#6B7280] focus:border-[#DDB66B] sm:text-[14px]"
+      />
 
-            </div>
+    </div>
 
-          </div>
+  </div>
 
 
-          <!-- ================= ADDRESS ================= -->
-          <div>
+  <!-- ================= ADDRESS ================= -->
+  <div>
 
-            <label class="mb-4 block
-                        font-jakarta
-                        text-[16px] 
-                        leading-6
-                        tracking-[1.6px]
-                        text-[#D4AF37]">
-              Address
-            </label>
+    <label
+      for="contactAddress"
+      class="mb-4 block font-jakarta text-[16px] leading-6 tracking-[1.6px] text-[#D4AF37]"
+    >
+      Address
+    </label>
 
-            <input type="text" placeholder="Enter your full address" class=" w-full rounded-[40px]
-                   border border-[#D1D5DB]
-                   bg-[#46423C]
-                   px-4
-                   py-[14px]
-                   text-[11px]
-                   text-white
-                   outline-none
-                   placeholder:text-[#6B7280]
-                   focus:border-[#DDB66B]
-                    sm:text-[14px]" />
+    <input
+      id="contactAddress"
+      name="address"
+      type="text"
+      required
+      placeholder="Enter your full address"
+      class="w-full rounded-[40px] border border-[#D1D5DB] bg-[#46423C] px-4 py-[14px] text-[11px] text-white outline-none placeholder:text-[#6B7280] focus:border-[#DDB66B] sm:text-[14px]"
+    />
 
-          </div>
+  </div>
 
 
-          <!-- ================= MESSAGE ================= -->
-          <div>
+  <!-- ================= MESSAGE ================= -->
+  <div>
 
-            <label class="mb-4 block
-                        font-jakarta
-                        text-[16px] 
-                        leading-6
-                        tracking-[1.6px]
-                        text-[#D4AF37]">
-              Message
-            </label>
+    <label
+      for="contactMessage"
+      class="mb-4 block font-jakarta text-[16px] leading-6 tracking-[1.6px] text-[#D4AF37]"
+    >
+      Message
+    </label>
 
-            <textarea rows="6" placeholder="Briefly describe your requirements..." class="w-full resize-none rounded-[20px]
-                   border border-[#D1D5DB]
-         bg-[#46423C]
-         px-4 py-[14px]
-         text-[11px]
-         sm:px-5 sm:py-[18px]
-         text-white
-         outline-none
-         placeholder:text-[#B4B4B4]
-         focus:border-[#DDB66B]
-         sm:text-[14px]"></textarea>
+    <textarea
+      id="contactMessage"
+      name="message"
+      required
+      maxlength="200"
+      rows="6"
+      placeholder="Briefly describe your requirements..."
+      class="w-full resize-none rounded-[20px] border border-[#D1D5DB] bg-[#46423C] px-4 py-[14px] text-[11px] text-white outline-none placeholder:text-[#B4B4B4] focus:border-[#DDB66B] sm:px-5 sm:py-[18px] sm:text-[14px]"
+    ></textarea>
+
+  </div>
 
 
-          </div>
+  <!-- ================= SUBMIT BUTTON ================= -->
+  <button
+    type="submit"
+    class="mt-1 w-full rounded-[12px] bg-[#E9C176E5] px-8 py-4 font-jakarta text-[8px] font-[700] uppercase leading-[14px] tracking-[0.7px] text-[#4E3700] transition-all duration-300 hover:bg-[#E8C77F] active:scale-[0.99] sm:text-[14px]"
+  >
+    Send Message
+  </button>
 
-
-          <!-- ================= SUBMIT BUTTON ================= -->
-          <button type="submit" class="mt-1  w-full
-          font-jakarta font-[700]
-                 rounded-[12px]
-                 bg-[#E9C176E5]
-                 text-[8px] 
-                 uppercase
-                 px-8 py-4
-                 leading-[14px]
-                 tracking-[0.7px]
-                 text-[#4E3700]
-                 transition-all duration-300
-                 hover:bg-[#E8C77F]
-                 active:scale-[0.99]
-                  sm:text-[14px]">
-            Send Message
-          </button>
-
-
-        </form>
+</form>
 
       </div>
 
@@ -2865,32 +3022,26 @@
            lg:py-8">
 
       <!-- ================= LOGO ================= -->
-      <div class="flex
-         items-center
-         justify-start
-         gap-3
-         sm:justify-center
-         md:justify-start">
+      <a href="#home" class="flex items-center justify-start gap-3 sm:justify-center md:justify-start">
 
         <!-- Logo mark -->
         <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M0.25 18L0 15.8L2.85 7.95C3.1 8.18333 3.37083 8.37917 3.6625 8.5375C3.95417 8.69583 4.26667 8.81667 4.6 8.9L1.85 16.45L0.25 18ZM10.75 18L9.15 16.45L6.4 8.9C6.73333 8.81667 7.04583 8.69583 7.3375 8.5375C7.62917 8.37917 7.9 8.18333 8.15 7.95L11 15.8L10.75 18ZM5.5 8C4.66667 8 3.95833 7.70833 3.375 7.125C2.79167 6.54167 2.5 5.83333 2.5 5C2.5 4.35 2.6875 3.77083 3.0625 3.2625C3.4375 2.75417 3.91667 2.4 4.5 2.2V0H6.5V2.2C7.08333 2.4 7.5625 2.75417 7.9375 3.2625C8.3125 3.77083 8.5 4.35 8.5 5C8.5 5.83333 8.20833 6.54167 7.625 7.125C7.04167 7.70833 6.33333 8 5.5 8ZM5.5 6C5.78333 6 6.02083 5.90417 6.2125 5.7125C6.40417 5.52083 6.5 5.28333 6.5 5C6.5 4.71667 6.40417 4.47917 6.2125 4.2875C6.02083 4.09583 5.78333 4 5.5 4C5.21667 4 4.97917 4.09583 4.7875 4.2875C4.59583 4.47917 4.5 4.71667 4.5 5C4.5 5.28333 4.59583 5.52083 4.7875 5.7125C4.97917 5.90417 5.21667 6 5.5 6Z"
+            d="M0.25 18L0 15.8L2.85 7.95C3.1 8.18333 3.37083 8.37917 3.6625 8.5375C3.95417 8.69583 4.26667 8.81667 4.6 8.9L1.85 16.45L0.25 18ZM10.75 18L9.15 16.45L6.4 8.9C6.73333 8.81667 7.04583 8.69583 7.3375 8.5375C7.62917 8.37917 7.9 8.18333 8.15 7.95L11 15.8L10.75 18ZM5.5 8C4.66667 8 3.95833 7.70833 3.375 7.125C2.79167 6.54167 2.5 5.83333 2.5 5C2.5 4.35 2.6875 3.77083 3.0625 3.2625C3.4375 2.75417 3.91667 2.4 4.5 2.2V0H6.5V2.2C7.08333 2.4 7.5625 2.75417 7.9375 3.2625C8.3125 3.77083 8.5 4.35 8.5 5C8.5 5.83333 8.20833 6.54167 7.625 7.125C7.04167 7.70833 6.33333 8 5.5 8ZM5.5 6C5.78333 6 6.02083 5.90417 6.2125 5.7125C6.40417 5.52083 6.5 5.28333 6.5 5C6.5 4.71667 6.40417 4.47917 6.2125 4.2875C6.02083 4.09583 5.78333 4 5.5 4C5.21667 4 4.97917 4.09583 4.7875 4.2875C4.59583 4.47917 4.5 4.71667 4.59583 5.7125C4.97917 5.90417 5.21667 6 5.5 6Z"
             fill="white" />
         </svg>
 
-
-
         <span class="font-jakarta
-              text-[18px]  md:text-[18px] 
-               font-[600]
-               lading-[28px]
-               tracking-[0.45px]
-               text-white">
+           text-[18px]
+           md:text-[18px]
+           font-[600]
+           leading-[28px]
+           tracking-[0.45px]
+           text-white">
           RADISSA
         </span>
 
-      </div>
+      </a>
 
 
       <!-- ================= NAVIGATION ================= -->
@@ -2948,7 +3099,7 @@
           Services
         </a>
 
-        <a href="#terms" class="font-jakarta
+        <a href="#contact" class="font-jakarta
                text-[11px]
                font-[400]
                text-[#9CA3AF]
@@ -2958,7 +3109,7 @@
                leading-5
 
                sm:text-[14px]">
-          Terms &amp; Condition
+          Contact
         </a>
 
       </nav>
@@ -3078,185 +3229,263 @@
 
     });
 
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const modal = document.getElementById("enquiryModal");
-      const modalBox = document.getElementById("enquiryModalBox");
-
-      const openDesktop = document.getElementById("openEnquiryModal");
-      const openMobile = document.getElementById("openEnquiryModalMobile");
-
-      const closeModal = document.getElementById("closeEnquiryModal");
-
-      const message = document.getElementById("message");
-      const messageCount = document.getElementById("messageCount");
-
-
-      // ==========================================
-      // OPEN MODAL
-      // ==========================================
-
-      function openEnquiry() {
-
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-
-        document.body.classList.add("overflow-hidden");
-
-      }
-
-
-      // ==========================================
-      // CLOSE MODAL
-      // ==========================================
-
-      function closeEnquiry() {
-
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-
-        document.body.classList.remove("overflow-hidden");
-
-      }
-
-
-      // ==========================================
-      // DESKTOP CONSULTATION BUTTON
-      // ==========================================
-
-      if (openDesktop) {
-
-        openDesktop.addEventListener("click", function (e) {
-
-          e.preventDefault();
-
-          openEnquiry();
-
-        });
-
-      }
-
-
-      // ==========================================
-      // MOBILE CONSULTATION BUTTON
-      // ==========================================
-
-      if (openMobile) {
-
-        openMobile.addEventListener("click", function (e) {
-
-          e.preventDefault();
-
-          openEnquiry();
-
-        });
-
-      }
-
-
-      // ==========================================
-      // CLOSE BUTTON
-      // ==========================================
-
-      if (closeModal) {
-
-        closeModal.addEventListener("click", function () {
-
-          closeEnquiry();
-
-        });
-
-      }
-
-
-      // ==========================================
-      // CLICK OUTSIDE MODAL
-      // ==========================================
-
-      modal.addEventListener("click", function (e) {
-
-        if (e.target === modal) {
-
-          closeEnquiry();
-
-        }
-
-      });
-
-
-      // ==========================================
-      // ESC KEY
-      // ==========================================
-
-      document.addEventListener("keydown", function (e) {
-
-        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-
-          closeEnquiry();
-
-        }
-
-      });
-
-
-      // ==========================================
-      // MESSAGE CHARACTER COUNT
-      // ==========================================
-
-      if (message && messageCount) {
-
-        message.addEventListener("input", function () {
-
-          messageCount.textContent =
-            `${message.value.length}/200`;
-
-        });
-
-      }
-
-
-      // ==========================================
-      // FORM SUBMIT
-      // ==========================================
-
-      const form = document.getElementById("enquiryForm");
-
-      if (form) {
-
-        form.addEventListener("submit", function (e) {
-
-          e.preventDefault();
-
-          // Add your API / backend submission here
-
-          alert("Thank you! We will get in touch with you shortly.");
-
-          form.reset();
-
-          messageCount.textContent = "0/200";
-
-          closeEnquiry();
-
-        });
-
-      }
-
+document.addEventListener("DOMContentLoaded", function () {
+
+  const modal = document.getElementById("enquiryModal");
+  const modalBox = document.getElementById("enquiryModalBox");
+
+  const openDesktop = document.getElementById("openEnquiryModal");
+  const openMobile = document.getElementById("openEnquiryModalMobile");
+
+  const closeModal = document.getElementById("closeEnquiryModal");
+
+  const message = document.getElementById("message");
+  const messageCount = document.getElementById("messageCount");
+
+  // OPEN MODAL
+  function openEnquiry() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  // CLOSE MODAL
+  function closeEnquiry() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  // DESKTOP BUTTON
+  if (openDesktop) {
+    openDesktop.addEventListener("click", function (e) {
+      e.preventDefault();
+      openEnquiry();
     });
+  }
 
-  history.scrollRestoration = "manual";
+  // MOBILE BUTTON
+  if (openMobile) {
+    openMobile.addEventListener("click", function (e) {
+      e.preventDefault();
+      openEnquiry();
+    });
+  }
 
-  window.addEventListener("load", () => {
-    // Remove #about / #services / etc. from URL
-    if (window.location.hash) {
-      history.replaceState(null, "", window.location.pathname + window.location.search);
+  // CLOSE BUTTON
+  if (closeModal) {
+    closeModal.addEventListener("click", function () {
+      closeEnquiry();
+    });
+  }
+
+  // CLICK OUTSIDE
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeEnquiry();
     }
-
-    // Go to top
-    window.scrollTo(0, 0);
   });
 
-  </script>
+  // ESC KEY
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeEnquiry();
+    }
+  });
+
+  // MESSAGE COUNT
+  if (message && messageCount) {
+    message.addEventListener("input", function () {
+      messageCount.textContent = `${message.value.length}/200`;
+    });
+  }
+
+});
+
+
+// ==========================================
+// FORMSPREE FORM SUBMIT
+// ==========================================
+
+const enquiryForm = document.getElementById("enquiryForm");
+const enquiryModal = document.getElementById("enquiryModal");
+const successMessage = document.getElementById("successMessage");
+const successCloseBtn = document.getElementById("successCloseBtn");
+
+if (enquiryForm) {
+
+  enquiryForm.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    const form = this;
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = "SUBMITTING...";
+
+    try {
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+
+        form.reset();
+
+        const messageCount = document.getElementById("messageCount");
+
+        if (messageCount) {
+          messageCount.textContent = "0/200";
+        }
+
+        // Show custom success message
+        successMessage.classList.remove("hidden");
+        successMessage.classList.add("flex");
+
+      } else {
+
+        console.error("Formspree submission failed.");
+
+      }
+
+    } catch (error) {
+
+      console.error("Form submission error:", error);
+
+    } finally {
+
+      submitButton.disabled = false;
+
+      submitButton.innerHTML = `
+        SUBMIT
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 12h14M13 6l6 6-6 6"
+          />
+        </svg>
+      `;
+
+    }
+
+  });
+
+}
+
+
+// ==========================================
+// CLOSE SUCCESS MESSAGE
+// ==========================================
+
+if (successCloseBtn) {
+
+  successCloseBtn.addEventListener("click", function () {
+
+    successMessage.classList.add("hidden");
+    successMessage.classList.remove("flex");
+
+    enquiryModal.classList.add("hidden");
+    enquiryModal.classList.remove("flex");
+
+    document.body.classList.remove("overflow-hidden");
+
+  });
+
+}
+
+
+// ==========================================
+// SCROLL RESTORATION
+// ==========================================
+
+history.scrollRestoration = "manual";
+
+window.addEventListener("load", () => {
+
+  if (window.location.hash) {
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search
+    );
+  }
+
+  window.scrollTo(0, 0);
+
+});
+
+
+ const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      // Simple browser validation
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "SENDING...";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+
+          // Normal success message
+          submitButton.textContent = "SUBMITTED ✓";
+
+          setTimeout(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
+          }, 2000);
+
+        } else {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Message";
+
+          console.error("Form submission failed.");
+        }
+
+      } catch (error) {
+        console.error("Form submission error:", error);
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      }
+    });
+  }
+</script>
 
 </body>
 
