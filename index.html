@@ -288,7 +288,7 @@
        HERO SECTION
   ====================================================== -->
 
-  <section id="home" class="relative  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
+  <section id="home" class="relative min-h-screen md:min-h-0  pb-14 pt-0 lg:pt-3 overflow-hidden bg-black text-white">
 
 
     <!-- BACKGROUND IMAGE -->
@@ -308,7 +308,7 @@
 
 
     <!-- CONTENT -->
-    <div class="relative z-10 ">
+    <div class="relative z-10 min-h-screen md:min-h-0">
 
 
       <!-- ================= NAVBAR ================= -->
@@ -1022,12 +1022,16 @@
 
 
       <!-- ================= BOTTOM SECTION (full width) ================= -->
-      <div class="mx-auto flex w-full items-end justify-between
-            px-8 pt-9 pb-9 sm:pb-5
-            sm:px-10
-            md:px-[50px]
-            lg:px-20
-            xl:px-[100px]">
+<div
+  class="absolute bottom-0 left-0
+         mx-auto flex w-full items-end justify-between
+         px-8 pb-9 pt-9
+         sm:px-10 sm:pb-5
+         md:static md:mx-auto md:flex md:w-full
+         md:items-end md:justify-between
+         md:px-[50px] md:pb-5 md:pt-9
+         xl:px-[100px]"
+>
 
         <!-- LEFT GROUP -->
         <div class="flex items-end gap-2
