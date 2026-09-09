@@ -3433,61 +3433,117 @@ window.addEventListener("load", () => {
 
 });
 
+const contactForm = document.getElementById("contactForm");
 
- const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", async function (e) {
-      e.preventDefault();
+    const submitButton = contactForm.querySelector(
+      'button[type="submit"]'
+    );
 
-      const submitButton = contactForm.querySelector(
-        'button[type="submit"]'
-      );
+    // Browser validation
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
 
-      // Simple browser validation
-      if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
-        return;
-      }
+    submitButton.disabled = true;
+    submitButton.textContent = "SENDING...";
 
-      submitButton.disabled = true;
-      submitButton.textContent = "SENDING...";
+    // Get form data
+    const formData = new FormData(contactForm);
 
-      try {
-        const response = await fetch(contactForm.action, {
-          method: "POST",
-          body: new FormData(contactForm),
-          headers: {
-            Accept: "application/json"
-          }
-        });
+    const fullName = formData.get("fullName");
+    const phone = formData.get("phoneNumber");
+    const email = formData.get("emailAddress");
+    const address = formData.get("address");
+    const message = formData.get("message");
 
-        if (response.ok) {
-          contactForm.reset();
+    try {
 
-          // Normal success message
-          submitButton.textContent = "SUBMITTED ✓";
+      // ==============================
+      // SEND TO FORMSPREE
+      // ==============================
 
-          setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = "Send Message";
-          }, 2000);
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
 
-        } else {
+      if (response.ok) {
+
+        // ==============================
+        // WHATSAPP MESSAGE
+        // ==============================
+
+        const whatsappMessage = `New Website Enquiry
+
+Name: ${fullName}
+Phone: ${phone}
+Email: ${email}
+Address: ${address}
+
+Message:
+${message}`;
+
+        // CLIENT WHATSAPP NUMBER
+        // Example: +91 98765 43210
+        const whatsappNumber = "919656020546";
+
+const whatsappURL =
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
+        // Open WhatsApp
+        window.open(whatsappURL, "_blank");
+
+
+        // ==============================
+        // RESET FORM
+        // ==============================
+
+        contactForm.reset();
+
+        submitButton.textContent = "SUBMITTED ✓";
+
+
+        // ==============================
+        // RESET BUTTON
+        // ==============================
+
+        setTimeout(() => {
           submitButton.disabled = false;
           submitButton.textContent = "Send Message";
+        }, 2000);
 
-          console.error("Form submission failed.");
-        }
-
-      } catch (error) {
-        console.error("Form submission error:", error);
+      } else {
 
         submitButton.disabled = false;
         submitButton.textContent = "Send Message";
+
+        console.error("Formspree submission failed.");
+
       }
-    });
-  }
+
+    } catch (error) {
+
+      console.error(
+        "Form submission error:",
+        error
+      );
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Message";
+
+    }
+  });
+}
 </script>
 
 </body>
